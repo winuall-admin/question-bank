@@ -35,4 +35,9 @@ class User extends Authenticatable
     public function role(){
         return $this->belongsTo('App\Role');
     }
+
+    public function scopeSearchByName($query, $name)
+    {
+        return $query->where('name', 'like', '%'.$name.'%');
+    }
 }
