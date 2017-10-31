@@ -23,6 +23,7 @@ class isAdmin
                 return $next($request);
             }
         }
-        else return 'Sorry, Access Denied';
+        return redirect('/');
+
     }
 }
