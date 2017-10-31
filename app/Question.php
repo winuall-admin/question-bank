@@ -10,6 +10,7 @@ class Question extends Model
         'question',
         'topic_id',
         'user_id',
+        'verified' // default set to 0
     ];
 
     protected $hidden = [
