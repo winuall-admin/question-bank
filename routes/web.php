@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::match(['get'], 'register', 'Auth\RegisterController@index')->name('register');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
